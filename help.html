@@ -1,0 +1,347 @@
+<!doctype html>
+
+
+
+<html lang="en">
+
+
+
+<head>
+
+
+
+<meta charset="utf-8">
+
+
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+
+
+<title>Help Center — Avatar Rating Control</title>
+
+
+
+<style>
+
+
+
+:root{--bg:#eef4ff;--panel:#fff;--panel2:#f7f9ff;--line:#dce5ff;--text:#20284a;--muted:#7180a6;--pink:#ff668c;--pink2:#ff9eb8;--blue:#5c8dff;--green:#27c98b;--purple:#9b7bff;--shadow:0 10px 0 rgba(65,91,160,.06),0 18px 38px rgba(65,91,160,.12)}
+
+
+
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 8% 0%,rgba(255,190,211,.62),transparent 27rem),radial-gradient(circle at 92% 5%,rgba(156,200,255,.7),transparent 30rem),linear-gradient(180deg,#f3f7ff 0%,#eaf1ff 100%);color:var(--text);font:14px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button{font:inherit;cursor:pointer;transition:transform .15s,filter .15s}button:hover{filter:brightness(1.035);transform:translateY(-1px)}.wrap{max-width:1540px;margin:auto;padding:28px}header{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:24px;padding:20px 22px;background:rgba(255,255,255,.86);border:2px solid white;border-radius:26px;box-shadow:var(--shadow)}.brand{display:flex;align-items:center;gap:15px}.logo{width:58px;height:58px;flex-shrink:0;border-radius:19px;background:linear-gradient(145deg,#ff9db8 0%,#ff668c 52%,#9b7bff 100%);display:grid;place-items:center;font-weight:1000;font-size:20px;color:white;border:3px solid #fff;box-shadow:0 6px 0 #e6d7ff,0 12px 24px rgba(255,102,140,.25)}h1{font-size:24px;line-height:1.15;margin:0;letter-spacing:-.04em}.sub,.muted{color:var(--muted);font-size:12px;font-weight:650}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:2px solid #dfe7ff;background:#f3f6ff;color:#34416a;border-radius:13px;padding:11px 16px;font-weight:900;text-decoration:none;box-shadow:0 3px 0 rgba(74,94,155,.09)}.btn.primary{background:linear-gradient(135deg,#ff8bad,#ff668c);color:#fff;border-color:#ff668c;box-shadow:0 4px 0 #df4e76}.hero{padding:28px 30px;margin-bottom:20px;background:linear-gradient(115deg,rgba(255,255,255,.97),rgba(248,250,255,.96));border:2px solid #fff;border-radius:25px;box-shadow:var(--shadow);position:relative;overflow:hidden}.hero:after{content:'?';position:absolute;right:28px;top:-42px;font-size:210px;line-height:1;font-weight:1000;color:rgba(155,123,255,.08);pointer-events:none}.eyebrow{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--purple);font-weight:950}.hero h2{font-size:clamp(27px,4vw,40px);line-height:1.1;letter-spacing:-.045em;margin:7px 0 10px}.hero p{margin:0;color:var(--muted);font-size:15px;max-width:650px;font-weight:600}.section-title{display:flex;align-items:end;justify-content:space-between;gap:15px;margin:28px 2px 13px}.section-title h2{font-size:20px;margin:0;letter-spacing:-.03em}.section-title p{margin:3px 0 0;color:var(--muted);font-weight:650}.steps{display:grid;grid-template-columns:1fr;gap:18px}.step{background:linear-gradient(150deg,#fff 0%,#f8faff 100%);border:2px solid white;border-radius:23px;overflow:hidden;box-shadow:var(--shadow);min-width:0}.step-head{display:flex;align-items:center;gap:13px;padding:19px 20px;border-bottom:2px solid #edf1ff;background:linear-gradient(100deg,#fff,#f8faff)}.num{width:43px;height:43px;display:grid;place-items:center;border-radius:15px;background:#ffe8ef;color:#b53d65;font-size:15px;font-weight:1000;box-shadow:0 3px 0 #f3c7d5;flex-shrink:0}.step:nth-child(2) .num{background:#eaf0ff;color:#3d66cb;box-shadow:0 3px 0 #d4dfff}.step:nth-child(3) .num{background:#e5fff4;color:#13835c;box-shadow:0 3px 0 #c4f0dd}.step:nth-child(4) .num{background:#f0eaff;color:#7656d1;box-shadow:0 3px 0 #ded2ff}.step-head h3{margin:0;font-size:17px;letter-spacing:-.025em}.step-head .muted{margin-top:2px}.step-body{padding:24px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px;align-items:center;max-width:1180px;margin:0 auto;width:100%}.step-body>.instructions{grid-column:1;grid-row:1;margin:0;min-width:0}.step-body>.gallery{grid-column:2;grid-row:1;min-width:0;width:100%;align-self:center}.instructions{list-style:none;padding:0;margin:0 0 17px;display:grid;gap:11px}.instructions li{display:grid;grid-template-columns:27px minmax(0,1fr);gap:10px;align-items:start;color:#47557e;font-weight:650}.instructions li b{display:grid;place-items:center;width:25px;height:25px;border-radius:9px;background:#edf2ff;color:#536fb9;font-size:11px}.instructions strong{color:#26345e}.image-slot{min-height:230px;padding:18px;border:2px dashed #cddaff;border-radius:18px;background:linear-gradient(145deg,#f9fbff,#f2f6ff);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#7d8db7;gap:8px}.image-slot .picture{font-size:31px;filter:saturate(.8)}.image-slot strong{font-size:13px;color:#5e6f9e}.image-slot small{font-size:11px;max-width:300px}.image-slot img{display:block;width:100%;max-height:390px;object-fit:contain;border-radius:12px}
+.gallery{position:relative;border:2px solid #dce5ff;border-radius:18px;background:linear-gradient(145deg,#f9fbff,#f2f6ff);overflow:hidden;padding:12px}
+.gallery-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-x:contain;border-radius:12px}
+.gallery-track::-webkit-scrollbar{display:none}
+.gallery-slide{flex:0 0 100%;min-width:0;scroll-snap-align:center;display:grid;place-items:center;min-height:210px}
+.gallery-slide img{display:block;width:100%;height:270px;object-fit:contain;border-radius:12px;background:#fff}.gallery-slide.image-missing:after{content:"Image not found: " attr(data-missing-file) " — make sure this PNG is inside dashboard/admin and served by the app.";display:flex;min-height:180px;align-items:center;justify-content:center;text-align:center;padding:24px;color:#b53d65;font-weight:800;background:#fff2f6;border:1px dashed #ff9eb8;border-radius:12px}
+.gallery-controls{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 2px 0}
+.gallery-arrow{width:38px;height:36px;border:2px solid #dce5ff;border-radius:12px;background:#fff;color:#34416a;font-weight:900;box-shadow:0 3px 0 rgba(74,94,155,.09)}
+.gallery-dots{display:flex;align-items:center;justify-content:center;gap:7px;flex:1}
+.gallery-dot{width:9px;height:9px;padding:0;border:0;border-radius:99px;background:#cbd6f4;box-shadow:none;transition:all .2s}
+.gallery-dot.active{width:23px;background:linear-gradient(90deg,#ff8bad,#9b7bff)}
+.gallery-count{font-size:11px;color:#7180a6;font-weight:800;min-width:36px;text-align:right}
+.gallery-caption{text-align:center;font-size:11px;color:#7180a6;font-weight:700;padding:7px 0 0}
+@media(max-width:520px){.gallery-slide img{height:200px}.gallery-slide{min-height:170px}}
+.wide{margin-top:18px}.wide .image-slot{min-height:270px}.video-card{margin-top:18px;background:linear-gradient(140deg,#f4efff,#fff 48%,#eef5ff);border:2px solid #ded4ff;border-radius:25px;padding:22px;box-shadow:var(--shadow)}.video-top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px;flex-wrap:wrap}.video-top h2{margin:0;font-size:22px;letter-spacing:-.03em}.video-top p{margin:4px 0 0;color:var(--muted);font-weight:650}.video-frame{position:relative;width:100%;aspect-ratio:16/9;min-height:250px;border:2px dashed #c7b9ff;border-radius:19px;overflow:hidden;background:linear-gradient(135deg,#fdfbff,#e9eaff);display:grid;place-items:center;text-align:center}.video-frame iframe,.video-frame video{position:absolute;inset:0;width:100%;height:100%;border:0}.video-placeholder{padding:24px;color:#6e62a0}.play{width:66px;height:66px;margin:0 auto 12px;border-radius:23px;background:linear-gradient(145deg,#ff8bad,#ff668c);display:grid;place-items:center;color:#fff;font-size:25px;box-shadow:0 5px 0 #df4e76,0 12px 25px #ff668c40}.video-placeholder strong{display:block;font-size:16px;color:#4d4778}.video-placeholder small{display:block;margin-top:5px}.footnote{text-align:center;color:var(--muted);font-size:11px;font-weight:650;padding:20px 8px 4px}
+
+
+
+@media(max-width:850px){.wrap{padding:14px}.steps{grid-template-columns:1fr}.step-body{grid-template-columns:1fr}.hero{padding:23px}.hero:after{right:5px;font-size:140px}header{padding:16px;align-items:flex-start}.step-body{padding:16px}.image-slot{min-height:190px}}@media(max-width:520px){header{flex-direction:column}.btn{width:100%}.brand h1{font-size:20px}.hero h2{font-size:28px}.video-frame{min-height:200px}}
+
+
+
+
+.support-card{display:flex;align-items:flex-start;gap:18px;margin-top:22px;padding:25px;background:linear-gradient(125deg,#fff0f5 0%,#fff 48%,#eef4ff 100%);border:2px solid #fff;border-radius:24px;box-shadow:var(--shadow)}
+.support-icon{flex:0 0 48px;width:48px;height:48px;display:grid;place-items:center;border-radius:17px;background:linear-gradient(145deg,#ff8bad,#9b7bff);color:#fff;font-size:26px;font-weight:900;box-shadow:0 4px 0 #d8dfff}
+.support-copy{min-width:0}.support-eyebrow{margin:0 0 3px;color:#8a76d8;font-size:11px;font-weight:900;letter-spacing:.12em}.support-copy h2{margin:0;font-size:22px;letter-spacing:-.03em}.support-copy>p:not(.support-eyebrow){margin:5px 0 15px;color:var(--muted);font-weight:600}
+.support-links{display:flex;flex-wrap:wrap;gap:10px}.support-link{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:11px 15px;border-radius:13px;text-decoration:none;font-weight:800;border:1px solid #dce5ff;background:#fff;color:var(--text);box-shadow:0 3px 0 #e5eaff}.support-link strong{color:#5c70ba}.support-link.discord{background:#f2efff;border-color:#d9d0ff}.support-link.discord strong{color:#7955ce}.support-link.email strong{overflow-wrap:anywhere}
+@media(max-width:600px){.support-card{padding:18px;gap:12px}.support-icon{flex-basis:40px;width:40px;height:40px}.support-copy h2{font-size:19px}.support-link{width:100%}}
+
+</style>
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="wrap">
+
+
+
+<header>
+
+
+
+  <div class="brand"><div class="logo">AR</div><div><h1>Avatar Rating Control</h1><div class="sub">Setup guides &amp; tutorials</div></div></div>
+
+
+
+  <a class="btn primary" href="/admin/">← Back to Dashboard</a>
+
+
+
+</header>
+
+
+
+<section class="hero"><div class="eyebrow">Avatar Rating Studio · Help Center</div><h2>Let's get your stream ready ✨</h2><p>Follow the setup guides one step at a time. Screenshots and a video walkthrough can be added here to help you get connected without guesswork.</p></section>
+
+
+
+<div class="section-title"><div><h2>Setup guides</h2><p>Work through these sections in order for the easiest setup.</p></div><span class="muted">5 guides · step by step</span></div>
+
+
+
+<section class="steps">
+
+  <article class="step">
+
+    <div class="step-head"><div class="num">01</div><div><h3>Open Roblox Studio</h3><div class="muted">Start the Avatar Rating game first</div></div></div>
+
+    <div class="step-body">
+
+      <ol class="instructions">
+
+        <li><b>1</b><span>Open <strong>AvatarRatingStudio.rbxl</strong> in Roblox Studio.</span></li>
+
+        <li><b>2</b><span>Press <strong>Play</strong> to start the game in a local test session.</span></li>
+
+        <li><b>3</b><span>Leave the game running while you finish the next setup steps.</span></li>
+
+      </ol>
+
+      <div class="gallery" data-gallery="1" aria-label="Roblox Studio setup image gallery">
+      <div class="gallery-track" tabindex="0" aria-label="Scroll through Roblox Studio setup screenshots"><div class="gallery-slide"><img src="images/sec1_img1.png" onerror="this.style.display='none'; this.closest('.gallery-slide').classList.add('image-missing'); this.closest('.gallery-slide').setAttribute('data-missing-file','sec1_img1.png');" alt="Roblox Studio setup screenshot 1" loading="lazy"></div><div class="gallery-slide"><img src="images/sec1_img2.png" onerror="this.style.display='none'; this.closest('.gallery-slide').classList.add('image-missing'); this.closest('.gallery-slide').setAttribute('data-missing-file','sec1_img2.png');" alt="Roblox Studio setup screenshot 2" loading="lazy"></div></div>
+      <div class="gallery-controls">
+        <button type="button" class="gallery-arrow" data-direction="-1" aria-label="Previous image" >←</button>
+        <div class="gallery-dots"><button type="button" class="gallery-dot active" aria-label="Show image 1" data-slide="0"></button><button type="button" class="gallery-dot" aria-label="Show image 2" data-slide="1"></button></div>
+        <button type="button" class="gallery-arrow" data-direction="1" aria-label="Next image" >→</button>
+        <span class="gallery-count">1 / 2</span>
+      </div>
+      <div class="gallery-caption">Use the arrows, dots, or horizontal scrolling to browse screenshots.</div>
+    </div>
+
+    </div>
+
+  </article>
+
+
+
+  <article class="step">
+
+    <div class="step-head"><div class="num">02</div><div><h3>Set up and start TikTok LIVE</h3><div class="muted">Go LIVE before launching the bridge app</div></div></div>
+
+    <div class="step-body">
+
+      <ol class="instructions">
+
+        <li><b>1</b><span>Open TikTok LIVE using the account you want to stream from.</span></li>
+
+        <li><b>2</b><span>Set up your stream and make sure your LIVE is actually running.</span></li>
+
+        <li><b>3</b><span>Keep the LIVE open while using Avatar Rating Studio.</span></li>
+
+      </ol>
+
+      <div class="gallery" data-gallery="2" aria-label="TikTok LIVE setup image gallery">
+      <div class="gallery-track" tabindex="0" aria-label="Scroll through TikTok LIVE setup screenshots"><div class="gallery-slide"><img src="images/sec2_img1.png" onerror="this.style.display='none'; this.closest('.gallery-slide').classList.add('image-missing'); this.closest('.gallery-slide').setAttribute('data-missing-file','sec2_img1.png');" alt="TikTok LIVE setup screenshot 1" loading="lazy"></div></div>
+      <div class="gallery-controls">
+        <button type="button" class="gallery-arrow" data-direction="-1" aria-label="Previous image" disabled>←</button>
+        <div class="gallery-dots"><button type="button" class="gallery-dot active" aria-label="Show image 1" data-slide="0"></button></div>
+        <button type="button" class="gallery-arrow" data-direction="1" aria-label="Next image" disabled>→</button>
+        <span class="gallery-count">1 / 1</span>
+      </div>
+      <div class="gallery-caption">Use the arrows, dots, or horizontal scrolling to browse screenshots.</div>
+    </div>
+
+    </div>
+
+  </article>
+
+
+
+  <article class="step">
+
+    <div class="step-head"><div class="num">03</div><div><h3>Launch Avatar Rating Studio</h3><div class="muted">Start the desktop app and connect TikTok</div></div></div>
+
+    <div class="step-body">
+
+      <ol class="instructions">
+
+        <li><b>1</b><span>Double-click <strong>Start Avatar Rating Studio.bat</strong>.</span></li>
+
+        <li><b>2</b><span>When prompted, enter the TikTok username hosting your LIVE, with or without the <strong>@</strong> symbol.</span></li>
+
+        <li><b>3</b><span>Allow the app to prepare its components and wait for the dashboard to open. Keep the terminal window running.</span></li>
+
+      </ol>
+
+      <div class="gallery" data-gallery="3" aria-label="Launch the desktop app image gallery">
+      <div class="gallery-track" tabindex="0" aria-label="Scroll through Launch the desktop app screenshots"><div class="gallery-slide"><img src="images/sec3_img1.png" onerror="this.style.display='none'; this.closest('.gallery-slide').classList.add('image-missing'); this.closest('.gallery-slide').setAttribute('data-missing-file','sec3_img1.png');" alt="Launch the desktop app screenshot 1" loading="lazy"></div><div class="gallery-slide"><img src="images/sec3_img2.png" onerror="this.style.display='none'; this.closest('.gallery-slide').classList.add('image-missing'); this.closest('.gallery-slide').setAttribute('data-missing-file','sec3_img2.png');" alt="Launch the desktop app screenshot 2" loading="lazy"></div></div>
+      <div class="gallery-controls">
+        <button type="button" class="gallery-arrow" data-direction="-1" aria-label="Previous image" >←</button>
+        <div class="gallery-dots"><button type="button" class="gallery-dot active" aria-label="Show image 1" data-slide="0"></button><button type="button" class="gallery-dot" aria-label="Show image 2" data-slide="1"></button></div>
+        <button type="button" class="gallery-arrow" data-direction="1" aria-label="Next image" >→</button>
+        <span class="gallery-count">1 / 2</span>
+      </div>
+      <div class="gallery-caption">Use the arrows, dots, or horizontal scrolling to browse screenshots.</div>
+    </div>
+
+    </div>
+
+  </article>
+
+
+
+  <article class="step">
+
+    <div class="step-head"><div class="num">04</div><div><h3>Create the Cloudflare Bridge</h3><div class="muted">Generate a URL to connect Roblox</div></div></div>
+
+    <div class="step-body">
+
+      <ol class="instructions">
+
+        <li><b>1</b><span>In the dashboard, find the <strong>Cloudflare Bridge</strong> card and click <strong>Create Bridge</strong>.</span></li>
+
+        <li><b>2</b><span>Wait for the bridge URL to appear, then click <strong>Copy Link</strong> or copy the URL manually.</span></li>
+
+        <li><b>3</b><span>Keep Avatar Rating Studio running. The temporary URL may change when you create a new bridge.</span></li>
+
+      </ol>
+
+      <div class="gallery" data-gallery="4" aria-label="Create the Cloudflare Bridge image gallery">
+      <div class="gallery-track" tabindex="0" aria-label="Scroll through Create the Cloudflare Bridge screenshots"><div class="gallery-slide"><img src="images/sec4_img1.png" onerror="this.style.display='none'; this.closest('.gallery-slide').classList.add('image-missing'); this.closest('.gallery-slide').setAttribute('data-missing-file','sec4_img1.png');" alt="Create the Cloudflare Bridge screenshot 1" loading="lazy"></div><div class="gallery-slide"><img src="images/sec4_img2.png" onerror="this.style.display='none'; this.closest('.gallery-slide').classList.add('image-missing'); this.closest('.gallery-slide').setAttribute('data-missing-file','sec4_img2.png');" alt="Create the Cloudflare Bridge screenshot 2" loading="lazy"></div></div>
+      <div class="gallery-controls">
+        <button type="button" class="gallery-arrow" data-direction="-1" aria-label="Previous image" >←</button>
+        <div class="gallery-dots"><button type="button" class="gallery-dot active" aria-label="Show image 1" data-slide="0"></button><button type="button" class="gallery-dot" aria-label="Show image 2" data-slide="1"></button></div>
+        <button type="button" class="gallery-arrow" data-direction="1" aria-label="Next image" >→</button>
+        <span class="gallery-count">1 / 2</span>
+      </div>
+      <div class="gallery-caption">Use the arrows, dots, or horizontal scrolling to browse screenshots.</div>
+    </div>
+
+    </div>
+
+  </article>
+
+
+
+  <article class="step">
+
+    <div class="step-head"><div class="num">05</div><div><h3>Connect Roblox to the Bridge</h3><div class="muted">Paste the URL into the running Roblox game</div></div></div>
+
+    <div class="step-body">
+
+      <ol class="instructions">
+
+        <li><b>1</b><span>Return to the running Roblox Studio test and locate the <strong>Bridge URL</strong> panel.</span></li>
+
+        <li><b>2</b><span>Paste the URL you copied from the dashboard into the Roblox bridge field.</span></li>
+
+        <li><b>3</b><span>Click <strong>Connect</strong> and wait for a success message. Check the dashboard heartbeat to confirm Roblox is communicating.</span></li>
+
+      </ol>
+
+      <div class="gallery" data-gallery="5" aria-label="Connect Roblox to the Bridge image gallery">
+      <div class="gallery-track" tabindex="0" aria-label="Scroll through Connect Roblox to the Bridge screenshots"><div class="gallery-slide"><img src="images/sec5_img1.png" onerror="this.style.display='none'; this.closest('.gallery-slide').classList.add('image-missing'); this.closest('.gallery-slide').setAttribute('data-missing-file','sec5_img1.png');" alt="Connect Roblox to the Bridge screenshot 1" loading="lazy"></div><div class="gallery-slide"><img src="images/sec5_img2.png" onerror="this.style.display='none'; this.closest('.gallery-slide').classList.add('image-missing'); this.closest('.gallery-slide').setAttribute('data-missing-file','sec5_img2.png');" alt="Connect Roblox to the Bridge screenshot 2" loading="lazy"></div></div>
+      <div class="gallery-controls">
+        <button type="button" class="gallery-arrow" data-direction="-1" aria-label="Previous image" >←</button>
+        <div class="gallery-dots"><button type="button" class="gallery-dot active" aria-label="Show image 1" data-slide="0"></button><button type="button" class="gallery-dot" aria-label="Show image 2" data-slide="1"></button></div>
+        <button type="button" class="gallery-arrow" data-direction="1" aria-label="Next image" >→</button>
+        <span class="gallery-count">1 / 2</span>
+      </div>
+      <div class="gallery-caption">Use the arrows, dots, or horizontal scrolling to browse screenshots.</div>
+    </div>
+
+    </div>
+
+  </article>
+
+</section>
+
+
+
+
+<div class="footnote">Recommended order: start Roblox Studio first, start your TikTok LIVE second, then launch Avatar Rating Studio and connect the bridge.</div>
+
+
+
+
+<section class="support-card" aria-label="Contact support">
+  <div class="support-icon">?</div>
+  <div class="support-copy">
+    <p class="support-eyebrow">NEED A HAND?</p>
+    <h2>Something not working?</h2>
+    <p>If you get stuck during setup, contact me and I’ll help you troubleshoot.</p>
+    <div class="support-links">
+      <a class="support-link discord" href="https://discord.com/" target="_blank" rel="noopener noreferrer">Contact on Discord <strong>imtheonebeach</strong></a>
+      <a class="support-link email" href="mailto:Nikitacazacu7@gmail.com">Email me <strong>Nikitacazacu7@gmail.com</strong></a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+
+
+
+<script>
+(() => {
+  document.querySelectorAll('[data-gallery]').forEach((gallery) => {
+    const track = gallery.querySelector('.gallery-track');
+    const slides = Array.from(gallery.querySelectorAll('.gallery-slide'));
+    const dots = Array.from(gallery.querySelectorAll('.gallery-dot'));
+    const count = gallery.querySelector('.gallery-count');
+    const arrows = Array.from(gallery.querySelectorAll('.gallery-arrow'));
+    if (!track || slides.length < 1) return;
+
+    let current = 0;
+    const goTo = (index) => {
+      current = (index + slides.length) % slides.length;
+      track.scrollTo({ left: slides[current].offsetLeft - slides[0].offsetLeft, behavior: 'smooth' });
+      dots.forEach((dot, i) => dot.classList.toggle('active', i === current));
+      if (count) count.textContent = `${current + 1} / ${slides.length}`;
+    };
+    arrows.forEach((button) => {
+      button.addEventListener('click', () => goTo(current + Number(button.dataset.direction)));
+    });
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => goTo(Number(dot.dataset.slide)));
+    });
+    let scrollTimer;
+    track.addEventListener('scroll', () => {
+      window.clearTimeout(scrollTimer);
+      scrollTimer = window.setTimeout(() => {
+        const trackRect = track.getBoundingClientRect();
+        const center = trackRect.left + trackRect.width / 2;
+        let nearest = 0, distance = Infinity;
+        slides.forEach((slide, i) => {
+          const rect = slide.getBoundingClientRect();
+          const d = Math.abs((rect.left + rect.width / 2) - center);
+          if (d < distance) { distance = d; nearest = i; }
+        });
+        current = nearest;
+        dots.forEach((dot, i) => dot.classList.toggle('active', i === current));
+        if (count) count.textContent = `${current + 1} / ${slides.length}`;
+      }, 70);
+    }, { passive: true });
+    track.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowRight') { event.preventDefault(); goTo(current + 1); }
+      if (event.key === 'ArrowLeft') { event.preventDefault(); goTo(current - 1); }
+    });
+  });
+})();
+</script>
+
+</body>
+
+
+
+</html>
