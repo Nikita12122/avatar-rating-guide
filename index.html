@@ -59,6 +59,17 @@
 .support-links{display:flex;flex-wrap:wrap;gap:10px}.support-link{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:11px 15px;border-radius:13px;text-decoration:none;font-weight:800;border:1px solid #dce5ff;background:#fff;color:var(--text);box-shadow:0 3px 0 #e5eaff}.support-link strong{color:#5c70ba}.support-link.discord{background:#f2efff;border-color:#d9d0ff}.support-link.discord strong{color:#7955ce}.support-link.email strong{overflow-wrap:anywhere}
 @media(max-width:600px){.support-card{padding:18px;gap:12px}.support-icon{flex-basis:40px;width:40px;height:40px}.support-copy h2{font-size:19px}.support-link{width:100%}}
 
+
+.quick-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:18px 0 24px}
+.quick-card{display:flex;flex-direction:column;gap:12px;padding:20px;text-decoration:none;color:var(--text);background:linear-gradient(150deg,#fff 0%,#f8faff 100%);border:2px solid #fff;border-radius:23px;box-shadow:var(--shadow);min-width:0;transition:transform .15s,box-shadow .15s,border-color .15s}
+.quick-card:hover{transform:translateY(-3px);border-color:#dce5ff;box-shadow:0 12px 0 rgba(65,91,160,.05),0 22px 42px rgba(65,91,160,.15)}
+.quick-card:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+.quick-art{height:150px;display:grid;place-items:center;border-radius:17px;background:linear-gradient(145deg,#f9fbff,#edf2ff);overflow:hidden}
+.quick-art svg{width:100%;height:100%;max-width:240px}
+.quick-card h3{margin:0;font-size:18px;letter-spacing:-.025em}.quick-card p{margin:0;color:var(--muted);font-weight:600;font-size:13px}.quick-card .card-step{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--purple);font-weight:950}.quick-card .launch{margin-top:auto;display:flex;justify-content:space-between;align-items:center;padding-top:8px;color:#5c70ba;font-weight:900}.quick-card.game-card{background:linear-gradient(145deg,#fff,#f3efff);border-color:#d9d0ff}.quick-card.game-card .launch{color:#7955ce}
+@media(max-width:850px){.quick-grid{grid-template-columns:1fr}.quick-card{display:grid;grid-template-columns:120px minmax(0,1fr);column-gap:15px;align-items:center}.quick-art{grid-row:1 / span 4;height:120px}.quick-card .card-step,.quick-card h3,.quick-card p,.quick-card .launch{grid-column:2}.quick-card .launch{padding-top:2px}}
+@media(max-width:480px){.quick-card{grid-template-columns:88px minmax(0,1fr);padding:14px;gap:8px}.quick-art{height:92px}.quick-card h3{font-size:16px}}
+
 </style>
 
 
@@ -91,195 +102,41 @@
 
 
 
-<section class="hero"><div class="eyebrow">Avatar Rating Studio · Help Center</div><h2>Let's get your stream ready ✨</h2><p>Follow the setup guides one step at a time. Screenshots and a video walkthrough can be added here to help you get connected without guesswork.</p></section>
+<section class="hero"><div class="eyebrow">Avatar Rating Control · Quick Setup</div><h2>Ready in 3 steps ✨</h2><p>Open the app, create a bridge, then connect it in Roblox. Click the third card to open the game.</p></section>
 
+<div class="section-title"><div><h2>How to connect</h2><p>Just follow these three steps.</p></div><span class="muted">About 1 minute</span></div>
 
-
-<div class="section-title"><div><h2>Setup guides</h2><p>Work through these sections in order for the easiest setup.</p></div><span class="muted">5 guides · step by step</span></div>
-
-
-
-<section class="steps">
-
-  <article class="step">
-
-    <div class="step-head"><div class="num">01</div><div><h3>Open Roblox Studio</h3><div class="muted">Start the Avatar Rating game first</div></div></div>
-
-    <div class="step-body">
-
-      <ol class="instructions">
-
-        <li><b>1</b><span>Open <strong>AvatarRatingStudio.rbxl</strong> in Roblox Studio.</span></li>
-
-        <li><b>2</b><span>Press <strong>Play</strong> to start the game in a local test session.</span></li>
-
-        <li><b>3</b><span>Leave the game running while you finish the next setup steps.</span></li>
-
-      </ol>
-
-      <div class="gallery" data-gallery="1" aria-label="Roblox Studio setup image gallery">
-      <div class="gallery-track" tabindex="0" aria-label="Scroll through Roblox Studio setup screenshots"><div class="gallery-slide"><img src="images/sec1_img1.png" onerror="this.style.display='none'; this.closest('.gallery-slide').classList.add('image-missing'); this.closest('.gallery-slide').setAttribute('data-missing-file','sec1_img1.png');" alt="Roblox Studio setup screenshot 1" loading="lazy"></div><div class="gallery-slide"><img src="images/sec1_img2.png" onerror="this.style.display='none'; this.closest('.gallery-slide').classList.add('image-missing'); this.closest('.gallery-slide').setAttribute('data-missing-file','sec1_img2.png');" alt="Roblox Studio setup screenshot 2" loading="lazy"></div></div>
-      <div class="gallery-controls">
-        <button type="button" class="gallery-arrow" data-direction="-1" aria-label="Previous image" >←</button>
-        <div class="gallery-dots"><button type="button" class="gallery-dot active" aria-label="Show image 1" data-slide="0"></button><button type="button" class="gallery-dot" aria-label="Show image 2" data-slide="1"></button></div>
-        <button type="button" class="gallery-arrow" data-direction="1" aria-label="Next image" >→</button>
-        <span class="gallery-count">1 / 2</span>
-      </div>
-      <div class="gallery-caption">Use the arrows, dots, or horizontal scrolling to browse screenshots.</div>
+<section class="quick-grid" aria-label="Three setup steps">
+  <article class="quick-card">
+    <div class="quick-art" aria-hidden="true">
+      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img"><rect x="40" y="22" width="140" height="105" rx="12" fill="#fff" stroke="#cddaff" stroke-width="3"/><rect x="40" y="22" width="140" height="23" rx="10" fill="#e9efff"/><circle cx="54" cy="33" r="3" fill="#ff8bad"/><circle cx="65" cy="33" r="3" fill="#9b7bff"/><rect x="58" y="58" width="104" height="48" rx="7" fill="#f4f6ff" stroke="#dce5ff"/><path d="M78 72h24M78 82h50M78 92h38" stroke="#8ba1df" stroke-width="4" stroke-linecap="round"/><rect x="128" y="82" width="25" height="20" rx="4" fill="#ff8bad"/><text x="140.5" y="96" text-anchor="middle" font-size="9" font-weight="900" fill="#fff">BAT</text></svg>
     </div>
+    <div class="card-step">Step 01</div><h3>Open the BAT file</h3><p>Double-click <strong>Start Avatar Rating Studio.bat</strong>. Wait for the dashboard to open and keep it running.</p><div class="launch"><span>Start the app</span><span>✓</span></div>
+  </article>
 
-    </div>
-
-  </article>
-
-
-
-  <article class="step">
-
-    <div class="step-head"><div class="num">02</div><div><h3>Set up and start TikTok LIVE</h3><div class="muted">Go LIVE before launching the bridge app</div></div></div>
-
-    <div class="step-body">
-
-      <ol class="instructions">
-
-        <li><b>1</b><span>Open TikTok LIVE using the account you want to stream from.</span></li>
-
-        <li><b>2</b><span>Set up your stream and make sure your LIVE is actually running.</span></li>
-
-        <li><b>3</b><span>Keep the LIVE open while using Avatar Rating Studio.</span></li>
-
-      </ol>
-
-      <div class="gallery" data-gallery="2" aria-label="TikTok LIVE setup image gallery">
-      <div class="gallery-track" tabindex="0" aria-label="Scroll through TikTok LIVE setup screenshots"><div class="gallery-slide"><img src="images/sec2_img1.png" onerror="this.style.display='none'; this.closest('.gallery-slide').classList.add('image-missing'); this.closest('.gallery-slide').setAttribute('data-missing-file','sec2_img1.png');" alt="TikTok LIVE setup screenshot 1" loading="lazy"></div></div>
-      <div class="gallery-controls">
-        <button type="button" class="gallery-arrow" data-direction="-1" aria-label="Previous image" disabled>←</button>
-        <div class="gallery-dots"><button type="button" class="gallery-dot active" aria-label="Show image 1" data-slide="0"></button></div>
-        <button type="button" class="gallery-arrow" data-direction="1" aria-label="Next image" disabled>→</button>
-        <span class="gallery-count">1 / 1</span>
-      </div>
-      <div class="gallery-caption">Use the arrows, dots, or horizontal scrolling to browse screenshots.</div>
+  <article class="quick-card">
+    <div class="quick-art" aria-hidden="true">
+      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img"><path d="M34 104h152" stroke="#cddaff" stroke-width="5" stroke-linecap="round"/><path d="M54 104V82Q110 20 166 82V104" fill="none" stroke="#9b7bff" stroke-width="9" stroke-linecap="round"/><path d="M54 104V82M166 104V82" stroke="#ff8bad" stroke-width="8" stroke-linecap="round"/><rect x="64" y="60" width="92" height="35" rx="10" fill="#fff" stroke="#dce5ff" stroke-width="3"/><path d="M78 77h47" stroke="#8ba1df" stroke-width="4" stroke-linecap="round"/><circle cx="139" cy="77" r="6" fill="#27c98b"/><path d="M104 40v-12m0 0-6 6m6-6 6 6" stroke="#ff668c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </div>
+    <div class="card-step">Step 02</div><h3>Create a Bridge</h3><p>In the dashboard, click <strong>Create Bridge</strong>, then copy the bridge URL.</p><div class="launch"><span>Copy the bridge URL</span><span>↗</span></div>
+  </article>
 
-    </div>
-
-  </article>
-
-
-
-  <article class="step">
-
-    <div class="step-head"><div class="num">03</div><div><h3>Launch Avatar Rating Studio</h3><div class="muted">Start the desktop app and connect TikTok</div></div></div>
-
-    <div class="step-body">
-
-      <ol class="instructions">
-
-        <li><b>1</b><span>Double-click <strong>Start Avatar Rating Studio.bat</strong>.</span></li>
-
-        <li><b>2</b><span>When prompted, enter the TikTok username hosting your LIVE, with or without the <strong>@</strong> symbol.</span></li>
-
-        <li><b>3</b><span>Allow the app to prepare its components and wait for the dashboard to open. Keep the terminal window running.</span></li>
-
-      </ol>
-
-      <div class="gallery" data-gallery="3" aria-label="Launch the desktop app image gallery">
-      <div class="gallery-track" tabindex="0" aria-label="Scroll through Launch the desktop app screenshots"><div class="gallery-slide"><img src="images/sec3_img1.png" onerror="this.style.display='none'; this.closest('.gallery-slide').classList.add('image-missing'); this.closest('.gallery-slide').setAttribute('data-missing-file','sec3_img1.png');" alt="Launch the desktop app screenshot 1" loading="lazy"></div><div class="gallery-slide"><img src="images/sec3_img2.png" onerror="this.style.display='none'; this.closest('.gallery-slide').classList.add('image-missing'); this.closest('.gallery-slide').setAttribute('data-missing-file','sec3_img2.png');" alt="Launch the desktop app screenshot 2" loading="lazy"></div></div>
-      <div class="gallery-controls">
-        <button type="button" class="gallery-arrow" data-direction="-1" aria-label="Previous image" >←</button>
-        <div class="gallery-dots"><button type="button" class="gallery-dot active" aria-label="Show image 1" data-slide="0"></button><button type="button" class="gallery-dot" aria-label="Show image 2" data-slide="1"></button></div>
-        <button type="button" class="gallery-arrow" data-direction="1" aria-label="Next image" >→</button>
-        <span class="gallery-count">1 / 2</span>
-      </div>
-      <div class="gallery-caption">Use the arrows, dots, or horizontal scrolling to browse screenshots.</div>
+  <a class="quick-card game-card" href="https://www.roblox.com/games/127459347085949/interactive" target="_blank" rel="noopener noreferrer" aria-label="Open Avatar Rating Control Roblox game">
+    <div class="quick-art" aria-hidden="true">
+      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img"><rect x="52" y="22" width="116" height="106" rx="18" fill="#fff" stroke="#d9d0ff" stroke-width="3"/><rect x="68" y="39" width="84" height="70" rx="12" fill="#f0eaff"/><path d="M110 49 137 65 121 94 94 78Z" fill="#9b7bff"/><path d="m110 49 11 45 16-29Z" fill="#ff8bad"/><circle cx="75" cy="34" r="3" fill="#ff8bad"/><circle cx="86" cy="34" r="3" fill="#27c98b"/><path d="M151 111l20 10" stroke="#5c8dff" stroke-width="5" stroke-linecap="round"/><circle cx="177" cy="123" r="7" fill="#5c8dff"/></svg>
     </div>
-
-    </div>
-
-  </article>
-
-
-
-  <article class="step">
-
-    <div class="step-head"><div class="num">04</div><div><h3>Create the Cloudflare Bridge</h3><div class="muted">Generate a URL to connect Roblox</div></div></div>
-
-    <div class="step-body">
-
-      <ol class="instructions">
-
-        <li><b>1</b><span>In the dashboard, find the <strong>Cloudflare Bridge</strong> card and click <strong>Create Bridge</strong>.</span></li>
-
-        <li><b>2</b><span>Wait for the bridge URL to appear, then click <strong>Copy Link</strong> or copy the URL manually.</span></li>
-
-        <li><b>3</b><span>Keep Avatar Rating Studio running. The temporary URL may change when you create a new bridge.</span></li>
-
-      </ol>
-
-      <div class="gallery" data-gallery="4" aria-label="Create the Cloudflare Bridge image gallery">
-      <div class="gallery-track" tabindex="0" aria-label="Scroll through Create the Cloudflare Bridge screenshots"><div class="gallery-slide"><img src="images/sec4_img1.png" onerror="this.style.display='none'; this.closest('.gallery-slide').classList.add('image-missing'); this.closest('.gallery-slide').setAttribute('data-missing-file','sec4_img1.png');" alt="Create the Cloudflare Bridge screenshot 1" loading="lazy"></div><div class="gallery-slide"><img src="images/sec4_img2.png" onerror="this.style.display='none'; this.closest('.gallery-slide').classList.add('image-missing'); this.closest('.gallery-slide').setAttribute('data-missing-file','sec4_img2.png');" alt="Create the Cloudflare Bridge screenshot 2" loading="lazy"></div></div>
-      <div class="gallery-controls">
-        <button type="button" class="gallery-arrow" data-direction="-1" aria-label="Previous image" >←</button>
-        <div class="gallery-dots"><button type="button" class="gallery-dot active" aria-label="Show image 1" data-slide="0"></button><button type="button" class="gallery-dot" aria-label="Show image 2" data-slide="1"></button></div>
-        <button type="button" class="gallery-arrow" data-direction="1" aria-label="Next image" >→</button>
-        <span class="gallery-count">1 / 2</span>
-      </div>
-      <div class="gallery-caption">Use the arrows, dots, or horizontal scrolling to browse screenshots.</div>
-    </div>
-
-    </div>
-
-  </article>
-
-
-
-  <article class="step">
-
-    <div class="step-head"><div class="num">05</div><div><h3>Connect Roblox to the Bridge</h3><div class="muted">Paste the URL into the running Roblox game</div></div></div>
-
-    <div class="step-body">
-
-      <ol class="instructions">
-
-        <li><b>1</b><span>Return to the running Roblox Studio test and locate the <strong>Bridge URL</strong> panel.</span></li>
-
-        <li><b>2</b><span>Paste the URL you copied from the dashboard into the Roblox bridge field.</span></li>
-
-        <li><b>3</b><span>Click <strong>Connect</strong> and wait for a success message. Check the dashboard heartbeat to confirm Roblox is communicating.</span></li>
-
-      </ol>
-
-      <div class="gallery" data-gallery="5" aria-label="Connect Roblox to the Bridge image gallery">
-      <div class="gallery-track" tabindex="0" aria-label="Scroll through Connect Roblox to the Bridge screenshots"><div class="gallery-slide"><img src="images/sec5_img1.png" onerror="this.style.display='none'; this.closest('.gallery-slide').classList.add('image-missing'); this.closest('.gallery-slide').setAttribute('data-missing-file','sec5_img1.png');" alt="Connect Roblox to the Bridge screenshot 1" loading="lazy"></div><div class="gallery-slide"><img src="images/sec5_img2.png" onerror="this.style.display='none'; this.closest('.gallery-slide').classList.add('image-missing'); this.closest('.gallery-slide').setAttribute('data-missing-file','sec5_img2.png');" alt="Connect Roblox to the Bridge screenshot 2" loading="lazy"></div></div>
-      <div class="gallery-controls">
-        <button type="button" class="gallery-arrow" data-direction="-1" aria-label="Previous image" >←</button>
-        <div class="gallery-dots"><button type="button" class="gallery-dot active" aria-label="Show image 1" data-slide="0"></button><button type="button" class="gallery-dot" aria-label="Show image 2" data-slide="1"></button></div>
-        <button type="button" class="gallery-arrow" data-direction="1" aria-label="Next image" >→</button>
-        <span class="gallery-count">1 / 2</span>
-      </div>
-      <div class="gallery-caption">Use the arrows, dots, or horizontal scrolling to browse screenshots.</div>
-    </div>
-
-    </div>
-
-  </article>
-
+    <div class="card-step">Step 03 · Roblox</div><h3>Open Roblox &amp; Connect</h3><p>Open the game, paste your bridge URL into the <strong>Bridge URL</strong> field, then click <strong>Connect</strong>.</p><div class="launch"><span>Open the Roblox game</span><span>↗</span></div>
+  </a>
 </section>
 
-
-
-
-<div class="footnote">Recommended order: start Roblox Studio first, start your TikTok LIVE second, then launch Avatar Rating Studio and connect the bridge.</div>
-
-
-
+<div class="footnote">That's it! Keep the desktop app running while you play.</div>
 
 <section class="support-card" aria-label="Contact support">
   <div class="support-icon">?</div>
   <div class="support-copy">
     <p class="support-eyebrow">NEED A HAND?</p>
     <h2>Something not working?</h2>
-    <p>If you get stuck during setup, contact me and I’ll help you troubleshoot.</p>
+    <p>If you run into any issues or need help setting things up, contact me and I’ll help you troubleshoot.</p>
     <div class="support-links">
       <a class="support-link discord" href="https://discord.com/" target="_blank" rel="noopener noreferrer">Contact on Discord <strong>imtheonebeach</strong></a>
       <a class="support-link email" href="mailto:Nikitacazacu7@gmail.com">Email me <strong>Nikitacazacu7@gmail.com</strong></a>
@@ -288,9 +145,6 @@
 </section>
 
 </div>
-
-
-
 
 <script>
 (() => {
